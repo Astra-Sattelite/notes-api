@@ -1,0 +1,13 @@
+# binary
+notes-api
+notes-api.exe
+*.exe
+bin/
+
+# secrets
+.env
+
+# redactors
+.idea/
+.vscode/
+.DS_Store
