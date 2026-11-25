@@ -80,5 +80,5 @@ func main() {
 	})
 
 	log.Println("listening on :" + port)
-	log.Fatal(http.ListenAndServe(":"+port, router))
+	log.Fatal(http.ListenAndServe(":" + port, router))
 }
