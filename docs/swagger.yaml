@@ -1,0 +1,58 @@
+basePath: /
+definitions:
+  main.CreateNoteRequest:
+    properties:
+      body:
+        example: Hello from Swagger
+        type: string
+      title:
+        example: First note
+        type: string
+    type: object
+  main.Note:
+    properties:
+      body:
+        type: string
+      created_at:
+        type: string
+      id:
+        type: integer
+      title:
+        type: string
+    type: object
+info:
+  contact: {}
+  title: Notes API
+  version: "1.0"
+paths:
+  /notes:
+    post:
+      consumes:
+      - application/json
+      description: Creates a note and returns it with id and created_at
+      parameters:
+      - description: Note data
+        in: body
+        name: note
+        required: true
+        schema:
+          $ref: '#/definitions/main.CreateNoteRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/main.Note'
+        "400":
+          description: bad json or title is required
+          schema:
+            type: string
+        "500":
+          description: internal error
+          schema:
+            type: string
+      summary: Create a note
+      tags:
+      - notes
+swagger: "2.0"
