@@ -24,7 +24,7 @@ Create `.env` in the project root:
 APP_ENV=dev
 PORT=8080
 
-DB_CREDS=postgres://app:app@localhost:5432/notes?sslmode=disable
+DB_CREDS=postgres://app:app@localhost:5432/notes
 RDB_CREDS=localhost:6379
 
 SWAGGER_HOST=localhost:8080
